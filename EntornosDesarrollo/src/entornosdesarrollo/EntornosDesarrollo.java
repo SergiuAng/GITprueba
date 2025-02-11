@@ -13,9 +13,8 @@ public class EntornosDesarrollo {
         double numAnimales = scanner.nextDouble();
         System.out.println("Los kilos que come cada animal");
         double KilosPorAnimal = scanner.nextDouble();
-        double consumo = numAnimales * KilosPorAnimal;
 
-        if (consumo <= comidaDiaria) {
+        if (calculaConsumo(numAnimales, KilosPorAnimal) <= comidaDiaria) {
             System.out.println("Hay comida de sobra y a cada animal le corresponden " + KilosPorAnimal + " Kilos.");
         } else {
             System.out.println("No tenemos la comida necesaria para cada animal");
@@ -23,5 +22,8 @@ public class EntornosDesarrollo {
 
         }
 
+    }
+    static double calculaConsumo(double numAnimales, double kgAnimal){
+        return numAnimales * kgAnimal;
     }
 }
